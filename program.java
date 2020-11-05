@@ -15,6 +15,7 @@ public class program {
 	        a[++top]='#';
 	        while ((s =bReader.readLine()) != null) {
 	        	String in=s;
+		System.out.println(in);
 	        	in+="\r\n";
 	        	for(i=0;i<in.length();i++) {
 	        		topc=a[top];
