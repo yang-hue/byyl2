@@ -22,7 +22,7 @@ public class program {
 	        			if(topc=='#'||topc=='(') {
 	        				System.out.println("I+");
 	        				a[++top]='+';
-	        				if(in.charAt(i+1)=='\r') {
+	        				if(in.charAt(i+1)!='i'&&in.charAt(i+1)!='(') {
 	        					System.out.println("RE");
 	        					return;
 	        				}
@@ -73,7 +73,7 @@ public class program {
 	        			if(topc=='#'||topc=='('||topc=='+') {
 	        				System.out.println("I*");
 	        				a[++top]='*';
-	        				if(in.charAt(i+1)=='\r') {
+	        				if(in.charAt(i+1)!='i'&&in.charAt(i+1)!='(') {
 	        					System.out.println("RE");
 	        					return;
 	        				}
