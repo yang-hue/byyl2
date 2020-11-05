@@ -15,7 +15,6 @@ public class program {
 	        a[++top]='#';
 	        while ((s =bReader.readLine()) != null) {
 	        	String in=s;
-		System.out.println(in);
 	        	in+="\r\n";
 	        	for(i=0;i<in.length();i++) {
 	        		topc=a[top];
@@ -23,6 +22,10 @@ public class program {
 	        			if(topc=='#'||topc=='(') {
 	        				System.out.println("I+");
 	        				a[++top]='+';
+	        				if(in.charAt(i+1)=='\r') {
+	        					System.out.println("RE");
+	        					return;
+	        				}
 	        			}
 	        			else if(topc=='+') {
 	        				if(topb<2) {
@@ -70,6 +73,10 @@ public class program {
 	        			if(topc=='#'||topc=='('||topc=='+') {
 	        				System.out.println("I*");
 	        				a[++top]='*';
+	        				if(in.charAt(i+1)=='\r') {
+	        					System.out.println("RE");
+	        					return;
+	        				}
 	        			}
 	        			else if(topc=='*') {
 	        				if(topb<2) {
@@ -221,6 +228,10 @@ public class program {
 	        				System.out.println("E");
 	        				return;
 	        			}
+	        		}
+	        		else {
+	        			System.out.println("E");
+        				return;
 	        		}
 	        	}
 	        }
